@@ -88,8 +88,7 @@ SETTINGS
 ##########################################################
 ## Install ADDC role on spoke-addc-vm
 ##########################################################
-/*
-resource "azurerm_virtual_machine_extension" "install-spoke-addc-vm" {
+/*resource "azurerm_virtual_machine_extension" "install-spoke-addc-vm" {
     
   name                 = "install-spoke-addc-vm"
   virtual_machine_id   = azurerm_windows_virtual_machine.spoke-addc-vm.id
@@ -103,8 +102,7 @@ resource "azurerm_virtual_machine_extension" "install-spoke-addc-vm" {
         "fileUris":["https://gist.githubusercontent.com/mddazure/fc3db37583cbfc80852f68a6b38bdc35/raw/d07b82133582199d2032b4d153bc3c696f88644f/addc.ps1"] 
     }
 SETTINGS
-}
-*/
+}*/
 ##########################################################
 ## Enable routing on nva-iptables-vm
 ##########################################################
@@ -122,6 +120,7 @@ resource "azurerm_virtual_machine_extension" "enable-routing-nva-iptables-vm" {
     }
 SETTINGS
 }
+/*
 ##########################################################
 ## Install ADDC role on spoke-addc-vm
 ##########################################################
@@ -139,5 +138,6 @@ resource "azurerm_virtual_machine_extension" "install-spoke-addc-vm" {
     }
 SETTINGS
 }
+*/
 
 

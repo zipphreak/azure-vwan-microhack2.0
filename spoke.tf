@@ -171,12 +171,6 @@ resource "azurerm_subnet" "nva-subnet-2" {
   virtual_network_name = azurerm_virtual_network.nva-vnet.name
   address_prefixes       = [var.nva-subnet2]
 }
-resource "azurerm_subnet" "bastion-nva-subnet" {
-  name                 = "AzureBastionSubnet"
-  resource_group_name  = azurerm_resource_group.vwan-microhack-spoke-rg.name
-  virtual_network_name = azurerm_virtual_network.nva-vnet.name
-  address_prefixes       = [var.nva-subnet1]
-}
 resource "azurerm_network_interface" "spoke-1-nic" {
   name                 = "spoke-1-nic"
   location             = var.location-hub-1
@@ -517,7 +511,7 @@ resource "azurerm_network_interface" "nva-iptables-vm-nic-1" {
     name                          = "nva-1-ipconfig"
     subnet_id                     = azurerm_subnet.nva-subnet-1.id
     private_ip_address_allocation = "Static"
-    private_ip_address = "172.16.20.4"
+    private_ip_address = "10.20.0.4"
     public_ip_address_id = azurerm_public_ip.nva-iptables-vm-pub-ip.id
   }
   tags = {

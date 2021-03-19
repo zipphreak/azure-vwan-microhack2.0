@@ -1,5 +1,3 @@
-
-
 variable "location-hub-1" {
   description = "Location to deploy hub-1"
   type        = string
@@ -139,6 +137,11 @@ variable "nva-subnet3" {
   description = "nva-CIDR SUBNET3"
   type        = string
   default     = "10.20.2.0/24"
+}
+variable "nva-vm1-ip" {
+ description = "nva-VM1 IP"
+  type        = string
+  default     = "10.20.2.4"
 }
 variable "shared-cidr" {
   description = "SHARED-CIDR RANGE"

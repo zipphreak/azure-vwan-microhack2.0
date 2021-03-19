@@ -147,7 +147,7 @@ resource "azurerm_bastion_host" "bastion-nva" {
 
   ip_configuration {
     name                 = "bastion-nva-configuration"
-    subnet_id            = azurerm_subnet.bastion-nva-subnet.id
+    subnet_id            = azurerm_subnet.nva-subnet-2.id
     public_ip_address_id = azurerm_public_ip.bastion-nva-pubip.id
   }
 }
