@@ -39,6 +39,11 @@
   virtual_hub_id            = azurerm_virtual_hub.microhack-eus2-hub.id
   remote_virtual_network_id = azurerm_virtual_network.services-vnet.id
 }
+    resource "azurerm_virtual_hub_connection" "microhack-eus2-hub-nva" {
+  name                      = "eus2-hub-nva"
+  virtual_hub_id            = azurerm_virtual_hub.microhack-eus2-hub.id
+  remote_virtual_network_id = azurerm_virtual_network.nva-vnet.id
+}
  resource "azurerm_virtual_hub_connection" "microhack-wus2-hub-spoke3" {
   name                      = "wus2-hub-spoke3"
   virtual_hub_id            = azurerm_virtual_hub.microhack-wus2-hub.id

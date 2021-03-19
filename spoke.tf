@@ -165,8 +165,8 @@ resource "azurerm_subnet" "nva-subnet-1" {
   virtual_network_name = azurerm_virtual_network.nva-vnet.name
   address_prefixes       = [var.nva-subnet1]
 }
-resource "azurerm_subnet" "nva-subnet-2" {
-  name                 = "nva-subnet-2"
+resource "azurerm_subnet" "bastion-nva-subnet" {
+  name                 = "AzureBastionSubnet"
   resource_group_name  = azurerm_resource_group.vwan-microhack-spoke-rg.name
   virtual_network_name = azurerm_virtual_network.nva-vnet.name
   address_prefixes       = [var.nva-subnet2]
