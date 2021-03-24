@@ -188,10 +188,15 @@ variable "username" {
   type        = string
   default     = "AzureAdmin"
 }
-variable "vngBGPAS" {
+variable "vng-BGP-AS" {
   description = "VNG BGP AS"
   type = string
   default = "64000"
+}
+variable "fg-BGP-AS" {
+  description = "VNG BGP AS"
+  type = string
+  default = "65000"
 }
 variable "password" {
   description = "Virtual Machine password, must meet Azure complexity requirements"
@@ -201,4 +206,35 @@ variable "password" {
 variable "vmsize" {
   description = "Size of the VMs"
   default     = "Standard_B1s"
+}
+variable "fg-mgmt-ip" {
+  description = "Mgmt IP of the Fortigate Router"
+  default     = "192.168.1.1"
+}
+variable "fg-bgp-as" {
+  description = "Fortigate BGP AS"
+  default     = "65000"
+}
+variable "fg-token" {
+  description = "Secret Token for API Access"
+  default     = "g3G93jG11cndhtcscm66pqcs0hGzxk"
+}
+variable "fg-outsideip" {
+  description = "Public Untrust Interface IP Address"
+  default = "24.60.34.199"
+}
+variable "vpn_use1_remote" {
+  default = "169.254.100.1"
+}
+variable "vpn_use1_local" {
+  default = "169.254.100.2"
+}
+variable "vpn_cidr30_mask" {
+  default = "255.255.255.255"
+}
+variable "vpn_use_remote_bgpas" {
+  default = "65515"
+}
+variable "vpn_use_local_bgpas" {
+  default = "65000"
 }
