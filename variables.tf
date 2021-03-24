@@ -217,11 +217,11 @@ variable "fg-bgp-as" {
 }
 variable "fg-token" {
   description = "Secret Token for API Access"
-  default     = "g3G93jG11cndhtcscm66pqcs0hGzxk"
+  default     = "add-your-token-here"
 }
 variable "fg-outsideip" {
   description = "Public Untrust Interface IP Address"
-  default = "24.60.34.199"
+  default = "add-your-outsideip-here"
 }
 variable "vpn_use1_remote" {
   default = "169.254.100.1"
